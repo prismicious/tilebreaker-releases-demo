@@ -78,7 +78,7 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-
+<script>/* Phone browsers follow a tap with compatibility mouse events at the tapped point. Godot reads them as a real mouse, and the tree puts a finger's read and its Buy button away the moment a real mouse moves, so a tap on a node did nothing. Drop mouse events within a second of a touch. */(function(){var touched=-1e9;function mark(){touched=performance.now();}['touchstart','touchmove','touchend','touchcancel'].forEach(function(name){window.addEventListener(name,mark,{capture:true,passive:true});});['mousemove','mousedown','mouseup'].forEach(function(name){window.addEventListener(name,function(event){if(performance.now()-touched<1000){event.stopImmediatePropagation();}},true);});})();</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -97,7 +97,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1712384,"index.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1741296,"index.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
